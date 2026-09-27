@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@derechoexceleado</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>¿Qué quieres añadir hoy?</h2>
+    
+    <!-- Botones de selección principal -->
+    <div class="menu-botones">
+      <button type="button" class="btn-opcion" onclick="mostrarFormulario('caso')">1) Caso</button>
+      <button type="button" class="btn-opcion" onclick="mostrarFormulario('pregunta')">2) Pregunta</button>
+      <button type="button" class="btn-opcion" onclick="mostrarFormulario('sentencia')">3) Sentencia</button>
+    </div>
+
+    <!-- FORMULARIO 1: CASO (6 Campos) -->
+    <form id="form-caso" class="formulario-seccion" style="display: none;">
+      <h3>Añadir Caso</h3>
+      <div class="campo">
+        <label>Fecha:</label>
+        <input type="date" name="caso_c1" required>
+      </div>
+<!-- aqui va un desplegable de sheets 1-->      
+      <div class="campo">
+        <label>Materia:</label>
+        <select id="desplegable-caso" name= "caso_c2" required>
+        <option value= "" disabled selected>Cargando opciones...</option>
+        </select> 
+      </div>
+      <div class="campo">
+        <label>Pregunta 1:</label>
+        <input type="text" name="caso_c3">
+      </div>
+      <div class="campo">
+        <label>Pregunta 2:</label>
+        <input type="text" name="caso_c4">
+      </div>
+      <div class="campo">
+        <label>Pregunta 3:</label>
+        <input type="text" name="caso_c5">
+      </div>
+      <div class="campo">
+        <label>Notas:</label>
+        <input type="text" name="caso_c6">
+      </div>
+
+      <div class="acciones">
+        <button type="button" class="btn-borrar" onclick="limpiarFormulario('form-caso')">Borrar todo</button>
+        <button type="submit" class="btn-guardar">Guardar en sheets</button>
+      </div>
+    </form>
+
+    <!-- FORMULARIO 2: PREGUNTA (5 Campos) -->
+    <form id="form-pregunta" class="formulario-seccion" style="display: none;">
+      <h3>Añadir Pregunta</h3>
+      <div class="campo">
+        <label>Fecha:</label>
+        <input type="date" name="preg_c1" required>
+      </div>
+      <!-- aqui va el desplegable de sheets 2 y cambie el type 70 de text a url -->
+      <div class="campo">
+        <label>Materia:</label>
+        <select id="desplegable-pregunta" name= preg_c2 required>
+        <option value= "" disabled selected>Cargando opciones...</option>
+        </select> 
+      </div>
+      <div class="campo">
+        <label>Fuente:</label>
+        <input type="url" name="preg_c3">
+      </div>
+      <div class="campo">
+        <label>Pregunta:</label>
+        <input type="text" name="preg_c4">
+      </div>
+      <div class="campo">
+        <label>Respuesta:</label>
+        <input type="text" name="preg_c5">
+      </div>
+
+      <div class="acciones">
+        <button type="button" class="btn-borrar" onclick="limpiarFormulario('form-pregunta')">Borrar todo</button>
+        <button type="submit" class="btn-guardar">Guardar en sheets</button>
+      </div>
+    </form>
+
+    <!-- FORMULARIO 3: SENTENCIA (4 Campos) -->
+    <form id="form-sentencia" class="formulario-seccion" style="display: none;">
+      <h3>Añadir Sentencia</h3>
+      <div class="campo">
+        <label>Nomenclatura:</label>
+        <input type="text" name="sent_c1" required>
+      </div>
+      <!-- aqui va desplegable de sheets 3 -->
+      <div class="campo">
+        <label>Materia:</label>
+        <select id="desplegable-sentencia" name= sent_c2 required>
+        <option value= "" disabled selected>Cargando opciones...</option>
+        </select> 
+      </div>
+      <div class="campo">
+        <label>Partes:</label>
+        <input type="text" name="sent_c3">
+      </div>
+      <div class="campo">
+        <label>Criterio:</label>
+        <input type="text" name="sent_c4">
+      </div>
+
+      <div class="acciones">
+        <button type="button" class="btn-borrar" onclick="limpiarFormulario('form-sentencia')">Borrar todo</button>
+        <button type="submit" class="btn-guardar">Guardar en sheets</button>
+      </div>
+    </form>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

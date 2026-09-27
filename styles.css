@@ -1,0 +1,97 @@
+body {
+  font-family: 'Segoe UI', Tahoma, georgia, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 480px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.menu-botones {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-opcion {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ff00ff;
+  background-color: #fefefe;
+  color: #ff00ff;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-opcion:hover {
+  background-color: #ff00ff;
+  color: white;
+}
+
+.formulario-seccion {
+  border-top: 2px solid #eef0f2;
+  padding-top: 15px;
+}
+
+.campo {
+  margin-bottom: 15px;
+}
+
+.campo label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.campo input, .campo select, .campo textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.acciones {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-borrar {
+  flex: 1;
+  background-color: #c2c2c2;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-guardar {
+  flex: 1;
+  background-color: #ff00ff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
